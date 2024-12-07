@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="jumbotron">
+<div ng-show="error" class="alert alert-danger">{{error}}</div>
+
+<form ng-submit="submit()">
+	Username: <input type="text" ng-model="username">
+	Password: <input type="password" ng-model="password">
+	<button type="submit">login</button>
+</form>
+</div>
+
+</body>
+</html>

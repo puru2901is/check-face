@@ -1,0 +1,28 @@
+<div class="jumbotron">
+ <div class="topleft">
+    <p>Accuracy</p>
+    <p> {{totalNumbarOfImagesCorrectlyIdentified}} in {{totalNumberOfImagesShown}} </p>
+  </div>
+  <h1>Identify Me</h1>
+  <p class="lead">
+    <img src="images/{{image}}.jpg" alt="I'm Baghel">
+    <p class="middle" ng-show= showingCorrectOption><img src="images/symbols/Right.jpg"></p>
+    <p class="middle" ng-show= showingWrongOption><img src="images/symbols/Wrong.png"></p>
+    Time Left
+    {{counterForGameEnd}}
+  </p>
+ <div class="container">
+  <form>
+    <div class="radio">
+      <label><input type="radio" ng-model="result" name="optradio" ng-value="'{{valueOfOptions[0]}}'" ng-click="checkValue()">{{valueOfOptions[0]}}</label>
+      <label><input type="radio" ng-model="result" name="optradio" ng-value="'{{valueOfOptions[1]}}'" ng-click="checkValue()">{{valueOfOptions[1]}}</label>
+      <label><input type="radio" ng-model="result" name="optradio" ng-value="'{{valueOfOptions[2]}}'" ng-click="checkValue()">{{valueOfOptions[2]}}</label>
+      <label><input type="radio" ng-model="result" name="optradio" ng-value="'{{valueOfOptions[3]}}'" ng-click="checkValue()">{{valueOfOptions[3]}}</label>
+    </div>
+  </form>
+</div>
+</div>
+
+<div class="topright">
+<button type="button" ng-click="logout()">logout {{{{globals.currentUser.username}}}}</button>
+</div>
